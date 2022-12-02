@@ -1,11 +1,20 @@
-import React from "react";
-import Accordion from "./component/accordion/Accordian";
+import React, { createContext } from "react";
+import CompA from "./CompA";
+
+const FirstName = createContext();
+const LastName = createContext();
+
 const App = () => {
   return (
     <>
-    <Accordion/>
+      <FirstName.Provider value={"Rin2"}>
+        <LastName.Provider value={"Swain"}>
+          <CompA />
+        </LastName.Provider>
+      </FirstName.Provider>
     </>
   );
 };
 
 export default App;
+export { FirstName, LastName };
