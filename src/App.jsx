@@ -7,11 +7,11 @@ const LastName = createContext();
 const App = () => {
   return (
     <>
-      <FirstName.Provider value={"Rin2"}>
+      <FirstName value={"Rin2"}>
         <LastName.Provider value={"Swain"}>
           <CompA />
         </LastName.Provider>
-      </FirstName.Provider>
+      </FirstName>
     </>
   );
 };
