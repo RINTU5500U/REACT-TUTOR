@@ -1,20 +1,32 @@
-import React, { createContext } from "react";
-import CompA from "./CompA";
-
-const FirstName = createContext();
-const LastName = createContext();
+import React, { useEffect, useState } from "react";
 
 const App = () => {
+  const [num, setNum] = useState(0);
+  const [nums, setNums] = useState(0);
+
+  useEffect(() => {
+    alert("clicked");
+  }, [num]);
+
   return (
     <>
-      <FirstName value={"Rin2"}>
-        <LastName.Provider value={"Swain"}>
-          <CompA />
-        </LastName.Provider>
-      </FirstName>
+      <button
+        onClick={() => {
+          setNum(num + 1);
+        }}
+      >
+        Click Me {num}
+      </button>
+      <br />
+      <button
+        onClick={() => {
+          setNums(nums + 1);
+        }}
+      >
+        Click Me {nums}
+      </button>
     </>
   );
 };
 
 export default App;
-export { FirstName, LastName };
