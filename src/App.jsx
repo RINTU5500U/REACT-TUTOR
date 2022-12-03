@@ -1,15 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
+import Statewise from "./components/stateWiseData/statewise";
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
 const App = () => {
-  const [num, setNum] = useState(0);
-  useEffect(()=>{
-    document.title = `you clicked ${num} times`
-  })
-  const add = () => { setNum(num + 1)};
-
   return (
     <>
-      <button onClick={add}>Click Me {num}</button>
+      <Statewise/>
     </>
   );
 };
