@@ -1,11 +1,11 @@
 import React from "react";
-import Statewise from "./components/stateWiseData/statewise";
-import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+// import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import ComA from "./ComA";
 
 const App = () => {
   return (
     <>
-      <Statewise/>
+      <ComA/>
     </>
   );
 };
