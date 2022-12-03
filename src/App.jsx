@@ -1,8 +1,9 @@
 import React from "react";
-import { Route, Switch } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import About from "./About";
 import Contact from "./Contact";
 import Error from "./Error";
+import Menu from "./Menu";
 
 const App = () => {
   const Name = () => {
@@ -10,12 +11,13 @@ const App = () => {
   };
   return (
     <>
-      <Switch>
+      <Menu />
+      <Routes>
         <Route exact path="/" component={About} />
         <Route exact path="/contact" component={Contact} />
-        <Route path="/contact/name" component={Name} />
+        <Route path="/contact/Name" component={Name} />
         <Route component={Error} />
-      </Switch>
+      </Routes>
     </>
   );
 };
