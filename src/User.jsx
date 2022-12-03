@@ -7,7 +7,8 @@ import { useLocation, useParams } from "react-router-dom";
 
 const User = () => {
   const { fname, lname } = useParams();
-  const location = useLocation;
+  const location = useLocation();
+  const history = useHistory();
   return (
     <>
       <h1>
@@ -15,7 +16,7 @@ const User = () => {
       </h1>
       <p>My current location is {location.pathname} </p>
       {location.pathname === "/user/Rin2/thapa" ? (
-        <button onClick={()=>alert('u r awesome')}>Click Me</button>
+        <button onClick={()=>history.goBack()}>Click Me</button>
       ) : null}
     </>
   );

@@ -11,8 +11,11 @@ const Menu = () => {
         <NavLink exact activeClassName="active_class" to="/service">
           Services
         </NavLink>
-        <NavLink exact activeClassName="active_class" to="/user/Rin2">
+        <NavLink exact activeClassName="active_class" to="/user/Rin2" >
           User
+        </NavLink>
+        <NavLink exact activeClassName="active_class" to="/Search">
+          demo
         </NavLink>
         <NavLink exact activeClassName="active_class" to="/contact">
           Contact Us
