@@ -1,11 +1,21 @@
 import React from "react";
-// import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
-import ComA from "./ComA";
+import { Route, Switch } from "react-router-dom";
+import About from "./About";
+import Contact from "./Contact";
+import Error from "./Error";
 
 const App = () => {
+  const Name = () => {
+    return <h1>Hello, I am a Name Page</h1>;
+  };
   return (
     <>
-      <ComA/>
+      <Switch>
+        <Route exact path="/" component={About} />
+        <Route exact path="/contact" component={Contact} />
+        <Route path="/contact/name" component={Name} />
+        <Route component={Error} />
+      </Switch>
     </>
   );
 };
