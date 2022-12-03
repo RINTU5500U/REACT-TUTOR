@@ -1,9 +1,10 @@
 import React from "react";
+import Error from "./Error";
 import { Route, Routes } from "react-router-dom";
 import About from "./About";
 import Contact from "./Contact";
-import Error from "./Error";
 import Menu from "./Menu";
+import User from "./User";
 
 const App = () => {
   const Name = () => {
@@ -13,9 +14,11 @@ const App = () => {
     <>
       <Menu />
       <Routes>
-        <Route exact path="/" component={About} />
+        <Route exact path="/" component={() => <About name="About" />} />
+        <Route exact path="/service" component={Contact} />
         <Route exact path="/contact" component={Contact} />
         <Route path="/contact/Name" component={Name} />
+        <Route path="/user/:fname/:lname" component={User} />
         <Route component={Error} />
       </Routes>
     </>
